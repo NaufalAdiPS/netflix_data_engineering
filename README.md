@@ -1,10 +1,10 @@
-# 🎬 Netflix User Behavior Data Pipeline
+# Netflix User Behavior Data Pipeline
 
 > A batch ETL project built with **Apache Airflow**, **PostgreSQL**, **Docker**, and **Metabase** — processing raw Netflix-style user activity data into analytics-ready datasets using **Medallion Architecture** (Bronze → Silver → Gold).
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Tech Stack](#tech-stack)
@@ -19,7 +19,7 @@
 
 ---
 
-## 🧭 Overview
+## Overview
 
 This project simulates a real-world data engineering pipeline for Netflix-style user behavior data. Raw CSV files are ingested, cleaned, and transformed into a star schema ready for analytics and dashboarding.
 
@@ -36,7 +36,7 @@ This project simulates a real-world data engineering pipeline for Netflix-style 
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Tool | Role |
 |---|---|
@@ -47,14 +47,14 @@ This project simulates a real-world data engineering pipeline for Netflix-style 
 
 ---
 
-## 🚀 Installation
+##  Installation
 
 Make sure **Docker** and **Docker Compose** are installed on your machine.
 
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
+git clone (https://github.com/NaufalAdiPS/netflix_data_engineering.git)
 cd netflix-data-engineering
 ```
 
@@ -78,7 +78,7 @@ docker-compose run --rm airflow-webserver airflow users create \
 
 ---
 
-## 🏗 Pipeline Architecture
+## Pipeline Architecture
 
 This pipeline follows the **Medallion Architecture** with three layers:
 
@@ -124,7 +124,7 @@ Builds a **Star Schema** optimized for analytics:
 
 ---
 
-## 🔁 Airflow DAG
+## Airflow DAG
 
 **DAG Name:** `netflix_batch_etl_pipeline`
 
@@ -142,7 +142,7 @@ bronze_task  ──►  silver_task  ──►  gold_task
 
 ---
 
-## ▶️ Running the Pipeline
+## Running the Pipeline
 
 Trigger the DAG via the **Airflow UI**, or test individual tasks from the CLI:
 
@@ -159,7 +159,7 @@ airflow tasks test netflix_batch_etl_pipeline gold_task 2026-04-01
 
 ---
 
-## 🌐 Access Services
+##  Access Services
 
 | Service | URL | Notes |
 |---|---|---|
@@ -169,7 +169,7 @@ airflow tasks test netflix_batch_etl_pipeline gold_task 2026-04-01
 
 ---
 
-## 📊 Data Visualization
+##  Data Visualization
 
 **Metabase** connects to the **Gold layer** in PostgreSQL to serve analytics dashboards.
 
@@ -183,7 +183,7 @@ Example dashboards included:
 
 ---
 
-## 📝 Notes
+##  Notes
 
 - This project uses **batch processing**, not streaming.
 - The dataset is **synthetic** and intended for analytics and data engineering practice.
@@ -198,10 +198,8 @@ postgresql://
 
 ---
 
-## 👤 Author
+## Author
 
 **Naufal Adi P.S**
 
----
 
-> 💡 *Built for learning and portfolio purposes. Feel free to fork and adapt for your own data engineering projects.*
